@@ -2,8 +2,8 @@ let board = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let gameOn = 'yes';
 
-let scoreX = 0;
-let computer = 0;
+let scoreX = parseInt(localStorage.getItem('scoreX') || 0;
+let computer = parseInt(localStorage.getItem('computer' || 0;
 
 document.getElementById('scoreX').innerHTML = "Player X :  " + scoreX;
 document.getElementById('computer').innerHTML = "Computer :  " + computer;
@@ -136,10 +136,12 @@ function checkWinner() {
 
       if (box1 === 'X') {
         scoreX++;
+        localStorage.setItem('scoreX', scoreX);
         document.getElementById('plays').innerHTML = 'You Win! 🎉';
         document.getElementById('scoreX').innerHTML = "Player X :  " + scoreX;
       } else {
         computer++;
+        localStorage.setItem('computer', computer);
         document.getElementById('plays').innerHTML = 'Computer Wins! 🤖';
         document.getElementById('computer').innerHTML = "Computer :  " + computer;
       }
@@ -170,6 +172,8 @@ function playAgain() {
 function resetGame() {
   scoreX = 0;
   computer = 0;
+  localStorage.setItem('scoreX', 0);
+  localStorage.setItem('computer', 0)
   document.getElementById('scoreX').innerHTML = "Player X : " + scoreX;
   document.getElementById('computer').innerHTML = "Computer : " + computer;
 
