@@ -2,8 +2,8 @@ let board = ['', '', '', '', '', '', '', '', ''];
 let currentPlayer = 'X';
 let gameOn = 'yes';
 
-let scoreX = parseInt(localStorage.getItem('scoreX') || 0;
-let computer = parseInt(localStorage.getItem('computer' || 0;
+let scoreX = parseInt(localStorage.getItem('scoreX')) || 0;
+let computer = parseInt(localStorage.getItem('computer')) || 0;
 
 document.getElementById('scoreX').innerHTML = "Player X :  " + scoreX;
 document.getElementById('computer').innerHTML = "Computer :  " + computer;
