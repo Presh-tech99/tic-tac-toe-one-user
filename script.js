@@ -91,7 +91,7 @@ function makeMove(index) {
     return;
   }
   
-  bestMove = findWinningMove('X');
+  bestMove = winningMove('X');
   if (bestMove !== -1) {
     makeMove(bestMove);
     return;
