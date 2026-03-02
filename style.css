@@ -1,0 +1,86 @@
+body {
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  background-color: #0d0d0d;
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  height: 300px;
+  width: 300px;
+  border: 1px solid #0d0d0d;
+  border-color: #00ffff;
+  box-shadow: 0 5px 15px rgba(0, 255, 106, 0.3);
+}
+
+.cell {
+  display: flex;
+  border: 1px solid #0d0d0d;
+  align-items: center;
+  justify-content: center;
+  border-color: #00ffff;
+
+
+}
+
+.cell:hover {
+  background-color: #00ffff80;
+}
+
+.btn-container {
+  display: grid;
+  place-items: center;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  gap: 0.5rem;
+  
+  
+}
+
+#play-btn {
+  border: none;
+  background: linear-gradient(90deg, #00ffff, #00ff80);
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.4s
+}
+
+#play-btn:hover {
+  background: linear-gradient(90deg, #00ffff, #00ff80);
+  box-shadow: 0 1px 15px #00ffff80;
+}
+
+
+#reset-btn {
+  border: none;
+  background: linear-gradient(90deg, #00ffff, #00ff80);
+  padding: 12px 30px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+#reset-btn:hover {
+  background: linear-gradient(90deg, #00ff80, #00ffff);
+  box-shadow: 0 1px 15px #00ffff80;
+}
+
+.header, .game-title, p{
+  color:#00ffff;
+  display: grid;
+  place-content: center;
+
+}
+
+
+.game-title {
+  font-weight: bold;
+  font-size: 30px;
+}
+
